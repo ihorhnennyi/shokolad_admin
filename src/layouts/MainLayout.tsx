@@ -1,6 +1,7 @@
 import { Box, Paper } from '@mui/material';
 import { FC, ReactNode } from 'react';
 import { Sidebar } from '../features/navigation/components/Sidebar';
+import { Header } from './components/Header';
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -18,24 +19,27 @@ export const MainLayout: FC<MainLayoutProps> = ({ children }) => {
       <Sidebar />
 
       <Box
-        component="main"
         sx={{
           flex: 1,
-          p: 3,
           display: 'flex',
+          flexDirection: 'column',
         }}
       >
-        <Paper
-          elevation={3}
-          sx={{
-            flex: 1,
-            bgcolor: 'background.paper',
-            borderRadius: 4,
-            p: 3,
-          }}
-        >
-          {children}
-        </Paper>
+        <Header />
+
+        <Box sx={{ flex: 1, p: 3 }}>
+          <Paper
+            elevation={3}
+            sx={{
+              flex: 1,
+              bgcolor: 'background.paper',
+              borderRadius: 4,
+              p: 3,
+            }}
+          >
+            {children}
+          </Paper>
+        </Box>
       </Box>
     </Box>
   );
