@@ -18,7 +18,7 @@ const LoginPage = () => {
           elevation={4}
           sx={{
             p: 4,
-            borderRadius: 4,
+            borderRadius: 2,
             bgcolor: 'background.paper',
           }}
         >
