@@ -7,7 +7,7 @@ import {
   UsersPage,
 } from '@/pages';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { MainLayout } from '../layouts/MainLayout';
+import { MainLayout } from '../layouts/components/MainLayout';
 
 const AppRouter = () => {
   return (
