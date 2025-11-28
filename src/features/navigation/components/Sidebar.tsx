@@ -11,20 +11,17 @@ import {
   Stack,
   Tooltip,
 } from '@mui/material';
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { sidebarItems } from '../data/sidebarItems';
+import { useSidebar } from '../hooks/useSidebar';
 
 const SIDEBAR_WIDTH = 260;
 const SIDEBAR_COLLAPSED_WIDTH = 80;
 
 export const Sidebar: FC = () => {
   const location = useLocation();
-  const [collapsed, setCollapsed] = useState(false);
-
-  const toggleCollapsed = () => {
-    setCollapsed((prev) => !prev);
-  };
+  const { collapsed, toggleCollapsed } = useSidebar();
 
   return (
     <Box
@@ -38,10 +35,9 @@ export const Sidebar: FC = () => {
         justifyContent: 'flex-start',
         px: collapsed ? 1.5 : 2.5,
         py: 3,
-        borderTopRightRadius: 32,
-        borderBottomRightRadius: 32,
         boxShadow: 4,
-        transition: 'width 0.25s ease, padding 0.25s ease, border-radius 0.25s ease',
+        borderRadius: 0, // убрали скругление у основного бокса
+        transition: 'width 0.25s ease, padding 0.25s ease',
         overflow: 'hidden',
       }}
     >
