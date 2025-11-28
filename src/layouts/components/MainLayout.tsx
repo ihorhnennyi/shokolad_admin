@@ -23,11 +23,22 @@ export const MainLayout: FC<MainLayoutProps> = ({ children }) => {
           flex: 1,
           display: 'flex',
           flexDirection: 'column',
+          minHeight: 0,
         }}
       >
         <Header />
 
-        <Box sx={{ flex: 1, p: 3 }}>{children}</Box>
+        <Box
+          sx={{
+            flex: 1,
+            p: 3,
+            minHeight: 0,
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
+          {children}
+        </Box>
       </Box>
     </Box>
   );

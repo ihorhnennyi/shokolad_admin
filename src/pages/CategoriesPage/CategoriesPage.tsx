@@ -28,7 +28,7 @@ const CategoriesPage: FC = () => {
   }, []);
 
   return (
-    <Box display="flex" flexDirection="column" gap={2}>
+    <Box display="flex" flexDirection="column" gap={2} sx={{ height: '100%' }}>
       <PageHeaderSection
         title="Категорії"
         subtitle="Тут буде управління категоріями продукції."

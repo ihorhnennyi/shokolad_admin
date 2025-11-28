@@ -70,12 +70,14 @@ export const CategoryListItem: FC<CategoryListItemProps> = ({
             <Typography
               variant="caption"
               sx={{
-                color: category.productsCount > 0 ? 'text.secondary' : 'error.main',
+                color: category.subcategoriesCount > 0 ? 'text.secondary' : 'error.main',
                 fontSize: 12,
                 whiteSpace: 'nowrap',
               }}
             >
-              {category.productsCount > 0 ? `${category.productsCount} товарів` : 'Немає товарів'}
+              {category.subcategoriesCount > 0
+                ? `${category.subcategoriesCount} підкатегорій`
+                : 'Немає підкатегорій'}
             </Typography>
           </Box>
         </Stack>

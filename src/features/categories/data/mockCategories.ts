@@ -12,7 +12,7 @@ export const mockCategories: Category[] = [
     isActive: true,
     createdAt: '2025-11-20T10:00:00.000Z',
     updatedAt: '2025-11-27T09:30:00.000Z',
-    productsCount: 14,
+    subcategoriesCount: 3,
   },
   {
     id: '2',
@@ -22,7 +22,7 @@ export const mockCategories: Category[] = [
     isActive: true,
     createdAt: '2025-11-21T12:15:00.000Z',
     updatedAt: '2025-11-26T14:10:00.000Z',
-    productsCount: 8,
+    subcategoriesCount: 5,
   },
   {
     id: '3',
@@ -32,6 +32,6 @@ export const mockCategories: Category[] = [
     isActive: false,
     createdAt: '2025-11-22T08:40:00.000Z',
     updatedAt: '2025-11-25T16:05:00.000Z',
-    productsCount: 0,
+    subcategoriesCount: 0,
   },
 ];

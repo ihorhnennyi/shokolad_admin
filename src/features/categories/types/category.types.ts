@@ -5,7 +5,7 @@ export interface Category {
   name: string;
   slug: string;
   icon: ElementType;
-  productsCount: number;
+  subcategoriesCount: number;
   isActive: boolean;
   createdAt: string;
   updatedAt: string;
